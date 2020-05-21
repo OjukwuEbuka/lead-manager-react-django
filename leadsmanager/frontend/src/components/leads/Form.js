@@ -22,7 +22,10 @@ class Form extends Component {
     onSubmit = e =>{
         e.preventDefault();
         const {name, email, message } = this.state;
-        this.props.addLead({name, email, message})
+        this.props.addLead({name, email, message});
+        this.setState({
+            name: "", email: "", message: ""
+        })
     }
 
     render() {
